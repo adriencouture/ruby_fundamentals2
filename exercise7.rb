@@ -42,21 +42,34 @@ output(expansion)
 puts # empty space
 puts "BONUS: Question 7".upcase
 
-def running_total(hash)
-  total_number_of_students = 0
+# def running_total(hash)
+  # total_number_of_students = 0
+  #
+  # hash.each do |key, value|
+  #   total_number_of_students += value
+  # end
+  #
+  # puts "There are #{total_number_of_students} students."
 
-  hash.each do |key, value|
-    total_number_of_students += value
-  end
+# end
 
-  puts "There are #{total_number_of_students} students."
+# running_total(students)
 
+student_total = 0
+values = students.values
+values.each do |total|
+  student_total += total
 end
 
-running_total(students)
+puts "There are #{student_total} students."
 
+# do |key, value|
+#   puts total_number_of_students += value
+# end
+
+puts # empty space
 puts "BONUS: Question 7 - .inject".upcase
 
-
 puts students.values.inject(:+)
-# students.inject { |key, value| puts value }
+
+# OR puts students.values.reduce(:+)
